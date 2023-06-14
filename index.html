@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="root">
+
+    </div>
+
+
+    
+</body>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+
+    const content = "Hello World"
+    const date = new Date().toDateString()
+    const randomNumb = Math.trunc(Math.random()*100)
+
+    const clicked = function(){
+        // location.reload()
+        alert("Salom Funksiya ishlab ketdi. Pepsi qani? bahodir 👁️")
+    }
+
+    const MyApp = ()=>{
+        return(
+           <div className="text__content">
+                <h1>{content}</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, deleniti, ratione repellendus qui nostrum beatae quam ut nesciunt perspiciatis autem dolorum alias commodi ipsum quibusdam atque. Totam, aut! Nulla, quisquam.</p>
+                <h2>{date}</h2>
+                <h1>{randomNumb}</h1>
+                <button onClick={clicked}>Push Me</button>
+            </div>
+        )
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById("root"))
+    root.render(<MyApp/>)
+
+
+</script>
+</html>
